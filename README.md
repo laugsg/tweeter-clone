@@ -64,4 +64,10 @@
       2. import { handleInitialData } from '../actions/shared' : Async Action
       3. export default connect()(App) : connect pass in dispatch by default
       4. within componentDidMoun dispatch handleInitialData : `componentDidMoun(){this.props.dispatch(handleInitialData())}`
+8. react-redux-loading : implements a loading bar
+      1. reducer: import { loadingBarReducer } from 'react-redux-loading' and pass it as `loadingBar:loadingBarReducer`
+      2. actions: import { showLoading, hideLoading } from 'react-redux-loading'
+            1. before request for data dispatch showLoading()
+            2. after dispatch all data needed, dispatch hideLoading()
+      3. component: import LoadingBar from 'react-redux-loading' into App.js and place it at the top
 
