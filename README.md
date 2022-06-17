@@ -48,8 +48,8 @@
 6. Create middlewares
       1. Middlewares use the Curring Pattern: `(store) => (next) => (action) => {}`
       2. they finish when next is invoked pass in action: 
-            1. `next(action)`
-            2. return the variable that holds next(action)
+         1. `next(action)`
+         2. return the variable that holds next(action)
             ```
             const returnValue = next(action)
             ...
@@ -70,4 +70,9 @@
             1. before request for data dispatch showLoading()
             2. after dispatch all data needed, dispatch hideLoading()
       3. component: import LoadingBar from 'react-redux-loading' into App.js and place it at the top
+9. Toggle Like Tweet : Asynchronous Action
+      1. action: optimistic update - update the store first, then make the request, then catch the error, 
+            1. if no errors: nothing happens
+            2. if errors: alert the error, dispatch the oposite action needed to resotre the item into their initial state
+      2. reducer: include the case into correspondent reducer (tweet)
 
