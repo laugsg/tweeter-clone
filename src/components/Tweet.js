@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { formatDate, formatTweet } from "../utils/helpers";
+import { Link } from 'react-router-dom'
 
 // Icons
 import { TiArrowBackOutline } from "react-icons/ti";
@@ -33,6 +34,7 @@ class Tweet extends Component {
       avatar,
       timestamp,
       text,
+      id,
       hasLiked,
       likes,
       replies,
@@ -40,7 +42,7 @@ class Tweet extends Component {
     } = tweet;
 
     return (
-      <div className="tweet">
+      <Link to={`/tweet/${id}`} className="tweet">
         <img className="avatar" src={avatar} alt={`Avatar of ${name}`} />
         <div className="tweet-info">
           <div>
@@ -69,7 +71,7 @@ class Tweet extends Component {
             <span>{likes !== 0 && likes}</span>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }
