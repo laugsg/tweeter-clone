@@ -1,4 +1,6 @@
-#
+# Key points
+
+Most complete commit : https://github.com/udacity/reactnd-chirper-app/commit/512ddca69dd99d67acf4b9795b1000c2e728e899
 
 ## Receiving the data
 
